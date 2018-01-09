@@ -9,7 +9,7 @@ build:
     tests:
         override:
             -
-                command: 'docker-compose up -d mongodb && npm run coverage && docker-compose-down'
+                command: 'npm run scrutinizer'
                 coverage:
                     file: 'coverage/clover.xml'
                     format: 'clover'

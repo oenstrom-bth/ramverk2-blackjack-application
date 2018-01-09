@@ -26,6 +26,7 @@
         "mongoclient": "docker-compose run mongodb mongo mongodb://mongodb/",
         "eslint": "eslint .; exit 0",
         "jest": "jest",
+        "scrutinizer": "docker-compose up -d mongodb && npm run coverage && docker-compose down",
         "coverage": "jest --coverage",
         "pretest": "docker-compose up -d mongodb",
         "test": "jest",

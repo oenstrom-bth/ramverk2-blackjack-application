@@ -4,10 +4,12 @@ filter:
         - "*.test.js"
         - "*.min.js"
 build:
+    environment:
+        node: v9.3.0
     tests:
         override:
             -
-                command: 'npm run coverage'
+                command: 'docker-compose up -d mongodb && npm run coverage && docker-compose-down'
                 coverage:
                     file: 'coverage/clover.xml'
                     format: 'clover'

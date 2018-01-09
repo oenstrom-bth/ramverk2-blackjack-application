@@ -9,7 +9,7 @@
 
 ## Installation
 1. Clone the repo.
-2. Run `npm install`
+2. Run `npm install` and `npm run install-client`.
 3. Run `npm run build-client-mac`, `npm run build-client-win` or `npm run build-client-linux`.
 4. Run`npm run mongodb` or start your installation of MongoDB.
 5. Run `npm start`to start the Express server.
@@ -21,7 +21,7 @@ To stop docker run `npm run stop-docker`.
 
 ### Dev
 1. Clone the repo.
-2. Run `npm install`.
+2. Run `npm install` and `npm run install-client`.
 3. Start your installation of MongoDB or use `npm run mongodb`.
 4. Run `npm run start-dev` to start the Express server.
 5. Run `npm run start-client-dev` to start React in dev mode.

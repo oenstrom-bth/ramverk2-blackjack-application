@@ -10,7 +10,7 @@
         "url": "https://github.com/oenstrom/ramverk2-blackjack-application"
     },
     "scripts": {
-        "postinstall": "cd client && npm install",
+        "install-client": "cd client && npm install",
         "build-client": "cd client && npm run build",
         "build-client-mac": "cd client && npm run build-mac",
         "build-client-win": "cd client && npm run build-win",

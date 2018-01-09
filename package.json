@@ -1,0 +1,58 @@
+{
+    "name": "ramverk2-blackjack-application",
+    "version": "1.0.0",
+    "description": "A Black Jack deskop application.",
+    "main": "index.js",
+    "author": "Olof Enström",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/oenstrom/ramverk2-blackjack-application"
+    },
+    "scripts": {
+        "postinstall": "cd client && npm install",
+        "build-client": "cd client && npm run build",
+        "build-client-mac": "cd client && npm run build-mac",
+        "build-client-win": "cd client && npm run build-win",
+        "build-client-linux": "cd client && npm run build-linux",
+        "start": "node server.js",
+        "start-dev": "nodemon server.js",
+        "start-client-dev": "cd client && npm start",
+        "start-client-electron-dev": "cd client && npm run electron-dev",
+        "start-docker": "npm run express",
+        "stop-docker": "docker-compose down",
+        "mongodb": "docker-compose up mongodb",
+        "express": "docker-compose up express",
+        "mongoclient": "docker-compose run mongodb mongo mongodb://mongodb/",
+        "eslint": "eslint .; exit 0",
+        "jest": "jest",
+        "coverage": "jest --coverage",
+        "pretest": "docker-compose up -d mongodb",
+        "test": "jest",
+        "posttest": "docker-compose down && npm run eslint",
+        "test-docker": "docker-compose run node_9_3_alpine npm test",
+        "test-docker1": "docker-compose run node_9_0_alpine npm test",
+        "test-docker2": "docker-compose run node_8_9_alpine npm test"
+    },
+    "devDependencies": {
+        "eslint": "^4.11.0",
+        "eslint-plugin-react": "^7.4.0",
+        "jest": "^21.2.1"
+    },
+    "jest": {
+        "verbose": true,
+        "collectCoverageFrom": [
+            "src/**/*.js"
+        ]
+    },
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "express": "^4.16.2",
+        "express-jwt": "^5.3.0",
+        "jov": "0.0.2",
+        "jsonwebtoken": "^8.1.0",
+        "mongodb": "^2.2.33",
+        "morgan": "^1.9.0",
+        "socket.io": "^2.0.4"
+    }
+}

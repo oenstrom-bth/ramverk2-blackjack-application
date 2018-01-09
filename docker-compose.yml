@@ -1,0 +1,56 @@
+version: "3"
+services:
+    mongodb:
+        image: mongo
+        container_name: "mongodb"
+        environment:
+            - MONGO_DATA_DIR=/data/db
+        volumes:
+            - ./data/db/:/data/db
+        ports:
+            - 27017:27017
+        command: mongod
+
+    express:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile-express
+        environment:
+            - DBWEBB_PORT=1337
+            - DBWEBB_DSN=mongodb://mongodb:27017/blackjack
+        links:
+            - mongodb
+        volumes:
+            - ./:/app/
+            - /app/node_modules
+        ports:
+            - "1337:1337"
+        command: "npm start"
+
+
+    node_9_3_alpine:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile-node-9-3-alpine
+        volumes:
+            - ./:/app
+        ports:
+            - "3093:3000"
+
+    node_9_0_alpine:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile-node-9-0-alpine
+        volumes:
+            - ./:/app
+        ports:
+            - "3090:3000"
+
+    node_8_9_alpine:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile-node-8-9-alpine
+        volumes:
+            - ./:/app
+        ports:
+            - "3070:3000"

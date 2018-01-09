@@ -1,0 +1,30 @@
+[
+    {
+        "username": "oenstrom",
+        "email": "olof.enstrom@gmail.com",
+        "password": "37aa1e6cbe05c9712ce390effcb7c9b7b3d75d422a1d880a74c801d86b10236f1b21aa397152ab651d1dbb9568e13979bacdd27e0b0cc6c4ec49b721f1435034",
+        "salt": "41ef455fd446d64c",
+        "money": 1000
+    },
+    {
+        "username": "mos",
+        "email": "mos@dbwebb.se",
+        "password": "83bbf53894a77677f13d6fc234aadbf87063753f88b351c35a0b5e2d65a0b38ff232466cb05299b55f7d181f7aa4a3c4eb3bdd3cdcd06c5cc9bd936447ca9cef",
+        "salt": "baec9f4d33b32aa4",
+        "money": 1000
+    },
+    {
+        "username": "aurora",
+        "email": "nhdandersson@gmail.com",
+        "password": "509509198b99d4607924d2205702cdc3757ed906a1296817d51ebd5a60fde616d979c8829ca5715504811b4e35ce5d2d579e373b40335671fda38f0e4df10a02",
+        "salt": "fca9bde2ce5ca46f",
+        "money": 1000
+    },
+    {
+        "username": "skvist",
+        "email": "niso16@student.bth.se",
+        "password": "a5cb57aab096f3aa4ade65545cf7982abcdf0aa793593039cca8effd0a9d72b7d83361203568f1c926e55ed4263779301095d8cd762bf254508e9be2ffd7ce34",
+        "salt": "83952df75428bf6b",
+        "money": 1000
+    }
+]
